@@ -33,4 +33,4 @@ SOFTWARE_UPDATES_PROXY_USER=
 SOFTWARE_UPDATES_PROXY_PASSWORD=<SECURE VALUE>
 
 #The oracle home location. This can be an existing Oracle Home or a new Oracle Home
-ORACLE_HOME=/oracle/home/jdev_122120
+ORACLE_HOME=/home/oracle/jdev_122120

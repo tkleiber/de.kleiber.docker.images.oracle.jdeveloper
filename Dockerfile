@@ -25,4 +25,4 @@ RUN rm -f /tmp/$SW_FILE2
 RUN rm -f /tmp/create_inventory.sh
 RUN rm -f /tmp/silent.rsp
 USER oracle
-CMD /oracle/home/jdev_122120/jdeveloper
+CMD /home/oracle/jdev_122120/jdeveloper
