@@ -3,7 +3,7 @@ pipeline {
     node {
       label 'localhost_vagrant'
     }
-    
+
   }
   stages {
     stage('Build Oracle SQL JDeveloper Image') {
@@ -29,9 +29,9 @@ pipeline {
     }
   }
   environment {
-    SW_VERSION = '12.2.1.2'
-    SW_FILE1 = 'jdev_suite_122120.jar'
-    SW_FILE2 = 'jdev_suite_1221202.jar'
+    SW_VERSION = '12.2.1.3'
+    SW_FILE1 = 'jdev_suite_122130.jar'
+    SW_FILE2 = 'jdev_suite_1221302.jar'
     SW_DIR = '/software/Oracle/JDeveloper'
   }
 }

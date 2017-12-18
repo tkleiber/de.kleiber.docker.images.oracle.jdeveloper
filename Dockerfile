@@ -15,11 +15,11 @@ RUN yum -y install xterm xauth libXtst \
 && chown -R oracle:oracle /home/oracle
 USER oracle
 ENV JAVA_HOME=/usr/java/default
-RUN java -jar /tmp/$SW_FILE1 -silent -force -responseFile /tmp/silent.rsp 
+RUN java -jar /tmp/$SW_FILE1 -silent -force -responseFile /tmp/silent.rsp
 USER root
 RUN rm -f /tmp/$SW_FILE1 \
 && rm -f /tmp/$SW_FILE2 \
 && rm -f /tmp/create_inventory.sh \
 && rm -f /tmp/silent.rsp
 USER oracle
-CMD /home/oracle/jdev_122120/jdeveloper/jdev/bin/jdev
+CMD /home/oracle/jdev_122130/jdeveloper/jdev/bin/jdev
