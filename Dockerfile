@@ -1,4 +1,4 @@
-FROM localhost:5000/oracle/serverjre:8
+FROM store/oracle/serverjre:8
 MAINTAINER torsten.kleiber@web.de
 ARG SW_FILE1
 ARG SW_FILE2
