@@ -14,7 +14,7 @@ pipeline {
         sh 'if [ ! -f $SW_FILE2 ]; then cp "$SW_DIR/$SW_FILE2" $SW_FILE2; fi'
         sh 'if [ ! -f silent.rsp ]; then cp "silent.rsp" silent.rsp; fi'
         sh 'if [ ! -f create_inventory.sh ]; then cp "create_inventory.sh" create_inventory.sh; fi'
-        withCredentials([usernamePassword(credentialsId: 'store.docker', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+        withCredentials([usernamePassword(credentialsId: 'docker_hub_id', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
           sh '''docker login --username $USERNAME --password $PASSWORD
 sudo docker build --tag oracle/jdeveloper:$SW_VERSION --build-arg SW_FILE1=$SW_FILE1 --build-arg SW_FILE2=$SW_FILE2 .'''
         }
