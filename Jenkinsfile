@@ -34,9 +34,9 @@ sudo docker build --tag oracle/jdeveloper:$SW_VERSION --build-arg SW_FILE1=$SW_F
     }
   }
   environment {
-    SW_VERSION = '12.2.1.3'
-    SW_FILE1 = 'jdev_suite_122130.jar'
-    SW_FILE2 = 'jdev_suite_1221302.jar'
+    SW_VERSION = '12.2.1.4'
+    SW_FILE1 = 'jdev_suite_122140.jar'
+    SW_FILE2 = 'jdev_suite_1221402.jar'
     SW_DIR = '/software/Oracle/JDeveloper'
   }
 }
