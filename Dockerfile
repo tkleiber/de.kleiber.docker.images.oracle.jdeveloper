@@ -7,12 +7,12 @@ ADD $SW_FILE1 /tmp/
 ADD $SW_FILE2 /tmp/
 ADD create_inventory.sh /tmp/
 ADD silent.rsp /tmp/
-RUN yum -y install xterm xauth libXtst \
-&& groupadd -g 54322 oracle \
-&& useradd -u 54321 -g oracle oracle \
-&& /tmp/create_inventory.sh /opt/oracle/oraInventory oracle \
-&& mkdir -p /oracle/home \
-&& chown -R oracle:oracle /home/oracle
+RUN yum -y install xterm xauth libXtst
+RUN  groupadd -g 54322 oracle
+RUN  useradd -u 54321 -g oracle oracle
+RUN  /tmp/create_inventory.sh /opt/oracle/oraInventory oracle
+RUN  mkdir -p /oracle/home
+RUN  chown -R oracle:oracle /home/oracle
 USER oracle
 ENV JAVA_HOME=/usr/java/default
 RUN java -jar /tmp/$SW_FILE1 -silent -force -responseFile /tmp/silent.rsp
