@@ -12,8 +12,8 @@ RUN groupadd -g 54322 oracle
 RUN useradd -u 54321 -g oracle oracle
 RUN ls -la /tmp/create_inventory.sh
 RUN ls -la /opt/oracle
-RUN /tmp/create_inventory.sh /opt/oracle/oraInventory oracle
 RUN mkdir -p /oracle/home
+RUN /tmp/create_inventory.sh /home/oracle/oraInventory oracle
 RUN chown -R oracle:oracle /home/oracle
 USER oracle
 ENV JAVA_HOME=/usr/java/default
